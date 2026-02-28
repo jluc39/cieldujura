@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="astronomie,astrophotographie,ciel,jura,nébuleuse,étoile,galaxie,planète,comète,astéroïde">
+<meta name="description" content="Découvrez l'astronomie et l'astrophotographie depuis le Jura, avec des photos, des conseils et des équipements détaillés.">
+<meta name="author" content="JL Combe">
+<meta http-equiv="refresh" content="60">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astronomie et Astrophotographie dans le Jura | Ciel du Jura</title>
+<link rel="icon" href="iconCDJ.png" sizes="32x32">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">   //pour affichage racine carrée
+</script>
+<style>
+.bout {display: inline-block;padding: 10px 20px;font-size: 1.5rem;font-family: Arial, sans-serif;color: #fff;background: linear-gradient(135deg, #0d6efd, #0d6efd);border: none;border-radius: 8px;text-decoration: none;text-align: center;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);transition: all 0.3s ease;}
+.bout:hover {background: linear-gradient(135deg, #04b92fb, #0ee66b);transform: scale(1.05);box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);}
+.bout:active {background: #ff2040;box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.4);}
+.boxtext{position: relative;top:0px;margin-left:210px;font-size:1.2rem;font-family:Tahoma,sans-serif;}
+.cnt{position: absolute;top:0px; right:1%;font-size:10px;}
+.container {display: flex;align-items: center;justify-content: space-between;}
+.text {width: 70%}
+.image_telescope {position: absolute;left: 500px;width: auto;}
+.banderole-container {position: relative;width: 100%;height: auto;}
+.banderole {width: 100%;max-height: 200px;object-fit: cover;}
+.banderole-texte {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);color: white;font-size: 4rem;font-family: 'Arial', sans-serif;color:#fbfad8;text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);font-weight: bold;text-align: left;}
+.image-bande {position: fixed;left: 0;top: 0;width: 200px;height: 100vh; z-index: -1; background-image: url('bande.jpg');background-repeat: repeat-y; background-size: cover;}
+.body {overflow-x: hidden;margin: 0;padding: 0;}
+</style>
+
+
+</head>
+<body style="background-color:#182025;color:#e0e0e0;">
+<div class="banderole-container">
+    <img src="banderole.jpg" alt="Banderole du site" class="banderole">
+    <div class="banderole-texte">Bienvenue dans le ciel du Jura</div>
+</div>
+<div class="image-bande"></div> <!-- Bande qui reste sur le côté -->
+<div class="cnt">
+  <strong id="visitCount"></strong>
+</div>
+<script>
+  let count = localStorage.getItem("visitCount");
+  if (!count) {
+    count = 1;
+  } else {
+    count = parseInt(count) + 1;
+  }
+  localStorage.setItem("visitCount", count);
+  document.getElementById("visitCount").textContent = count;
+</script>
+</div>
+<div class="boxtext">
+<h2><br>Connaissez vous l'astrophotographie ?</h2>
+<p>Dans le ciel profond, les signaux lumineux sont extrêmement faibles.<br> 
+Même avec un télescope de grande taille, d'un diamètre de 300 à 400 mm, nos yeux ne parviennent pas à distinguer les couleurs des objets célestes !<br>
+Nos yeux peuvent être comparés à une caméra avec une exposition très rapide, d'environ 1/20 seconde (soit 0.05 seconde).<br>
+En astrophotographie, les séquences d'expositions durent au minimum une heure (3600 secondes), bien plus longtemps que ce que nos yeux peuvent percevoir en une fraction de seconde.<br>
+Le rapport entre ces deux temps nous donne une idée de la quantité de lumière capturée par l'appareil photographique par rapport à celle que nos yeux peuvent voir.<br>
+Ce rapport est donc de : 3600 / 0.05 = 72000<br>
+Pour observer la même scène en visuel qu'avec une photo prise sur un télescope de &#x2300;80 mm et une exposition de 3600 secondes, il faudrait un miroir de diamètre bien plus grand !<br>
+Ce diamètre serait :<br>
+\( 2 \times \sqrt{72000 \times 40 \times 40} = 21466 \, \text{mm} \) soit 21.4 mètres !!!<br>
+Cela montre l'énorme différence entre la capacité de nos yeux et celle des prises de vues photographiques en matière de collecte de lumière.</p><br>
+
+<p>Mon lieu d'observation est mon jardin, situé en France dans le département du Jura sur la commune de Macornay.<br>
+Ce n'est malheureusement pas un site exceptionnel, la pollution lumineuse est moyenne avec une météo plutôt capricieuse.</p>
+
+
+<div class="container my-4" style="margin-left: 2%; max-width: 80%;">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h2>Mon Setup :</h2>
+            <ul>
+                <li>Lunette triplet SW Esprit100 focale=550mm F5.5</li>
+                <li>Monture équatoriale SW EQ6-r</li>
+                <li>Camera couleur refroidie ZWO ASI294MC</li>
+                <li>Camera d'autoguidage ZWO ASI120MM</li>
+                <li>Filtres IR/UV_cut ou Ha/O3_7nm</li>
+            </ul>
+			<h2>Les Softs :</h2>
+			<ul>
+				<li>STELLARIUM, planetarium</li>
+				<li>NINA, séquenceur de photos</li>
+				<li>PHD2_Guiding, autoguidage</li>
+				<li>SIRIL ou DSS, alignement et empilement des photos</li>
+				<li>PHOTOSHOP, traitement des images</li>
+			</ul>
+        </div>
+        <div class="col-md-4">
+            <img src="telescope1.jpg" class="img-fluid rounded" alt="Télescope APO de 100 mm avec monture équatoriale utilisé pour capturer des images du ciel profond">
+        </div>
+    </div>
+</div>
+<p></p>
+<a class="bout" href="car1.html">Galerie Photos 2021-2025</a>
+<p></p>
+
+<p>Laissez votre message ici.</p>
+
+<div style="display: flex; align-items: flex-start; justify-content: flex-start;">
+    <form action="https://formsubmit.co/combe.jeanluc@neuf.fr" method="POST" style="width: 50%; max-width: 600px;">
+
+  <textarea rows="5"
+            class="form-control mb-2"
+            name="message"
+            placeholder="Votre message"
+            required></textarea>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Message depuis Ciel du Jura">
+
+  <button type="submit"
+          class="btn btn-primary"
+          style="font-size:1.2rem; font-family:Tahoma,sans-serif;">
+          Envoyer
+  </button>
+
+</form>
+    <div id="result" style="margin-left: 20px;"></div>
+</div>
+
+</div>
+</body>
+</html>
