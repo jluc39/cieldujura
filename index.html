@@ -38,23 +38,14 @@
     <div class="banderole-texte">Bienvenue dans le ciel du Jura</div>
 </div>
 <div class="image-bande"></div> <!-- Bande qui reste sur le côté -->
+
 <div class="cnt">
   <strong id="visitCount"></strong>
 </div>
-<script>
-  let count = localStorage.getItem("visitCount");
-  if (!count) {
-    count = 1;
-  } else {
-    count = parseInt(count) + 1;
-  }
-  localStorage.setItem("visitCount", count);
-  document.getElementById("visitCount").textContent = count;
-</script>
-</div>
+
 <div class="boxtext">
 <h2><br>Connaissez vous l'astrophotographie ?</h2>
-<p>Dans le ciel profond, les signaux lumineux sont extrêmement faibles.<br> 
+<p>Dans le ciel profond, les signaux lumineux sont extrêmement faibles.<br>
 Même avec un télescope de grande taille, d'un diamètre de 300 à 400 mm, nos yeux ne parviennent pas à distinguer les couleurs des objets célestes !<br>
 Nos yeux peuvent être comparés à une caméra avec une exposition très rapide, d'environ 1/20 seconde (soit 0.05 seconde).<br>
 En astrophotographie, les séquences d'expositions durent au minimum une heure (3600 secondes), bien plus longtemps que ce que nos yeux peuvent percevoir en une fraction de seconde.<br>
@@ -68,7 +59,6 @@ Cela montre l'énorme différence entre la capacité de nos yeux et celle des pr
 <p>Mon lieu d'observation est mon jardin, situé en France dans le département du Jura sur la commune de Macornay.<br>
 Ce n'est malheureusement pas un site exceptionnel, la pollution lumineuse est moyenne avec une météo plutôt capricieuse.</p>
 
-
 <div class="container my-4" style="margin-left: 2%; max-width: 80%;">
     <div class="row align-items-center">
         <div class="col-md-8">
@@ -76,7 +66,7 @@ Ce n'est malheureusement pas un site exceptionnel, la pollution lumineuse est mo
             <ul>
                 <li>Lunette triplet SW Esprit100 focale=550mm F5.5</li>
                 <li>Monture équatoriale SW EQ6-r</li>
-                <li>Camera couleur refroidie ZWO ASI294MC</li>
+                <li>Camera couleur refroidie -10°C ZWO ASI294MC</li>
                 <li>Camera d'autoguidage ZWO ASI120MM</li>
                 <li>Filtres IR/UV_cut ou Ha/O3_7nm</li>
             </ul>
@@ -85,7 +75,7 @@ Ce n'est malheureusement pas un site exceptionnel, la pollution lumineuse est mo
 				<li>STELLARIUM, planetarium</li>
 				<li>NINA, séquenceur de photos</li>
 				<li>PHD2_Guiding, autoguidage</li>
-				<li>SIRIL ou DSS, alignement et empilement des photos</li>
+				<li>SIRIL, calibration, alignement et empilement des photos</li>
 				<li>PHOTOSHOP, traitement des images</li>
 			</ul>
         </div>
@@ -114,5 +104,15 @@ Ce n'est malheureusement pas un site exceptionnel, la pollution lumineuse est mo
 </div>
 
 </div>
+<script>
+  let count = localStorage.getItem("visitCount");
+  if (!count) {
+    count = 1;
+  } else {
+    count = parseInt(count) + 1;
+  }
+  localStorage.setItem("visitCount", count);
+  document.getElementById("visitCount").textContent = count;
+</script>
 </body>
 </html>
